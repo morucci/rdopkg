@@ -677,7 +677,7 @@ def fetch_patches_branch(local_patches_branch, gerrit_patches_chain=None):
     git('fetch', 'patches', 'refs/changes/' + gerrit_patches_chain)
     git.checkout(local_patches_branch)
     git('reset', '--hard', 'FETCH_HEAD')
-    git.checkout('master')
+    git.checkout('rdo-liberty')
 
 def rebase_patches_branch(new_version, local_patches_branch,
                           patches_branch=None, local_patches=False,
